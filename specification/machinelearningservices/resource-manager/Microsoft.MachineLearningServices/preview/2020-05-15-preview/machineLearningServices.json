@@ -2279,6 +2279,10 @@
                     "modelAsString": true
                   }
                 },
+                "virtualMachineImage": {
+                  "description": "Virtual Machine image for AML Compute - windows only",
+                  "$ref": "#/definitions/VirtualMachineImage"
+                },
                 "scaleSettings": {
                   "description": "Scale settings for AML Compute",
                   "$ref": "#/definitions/ScaleSettings"
@@ -2620,6 +2624,19 @@
       },
       "required": [
         "maxNodeCount"
+      ]
+    },
+    "VirtualMachineImage": {
+      "type": "object",
+      "description": "Virtual Machine image for Windows AML Compute",
+      "properties": {
+        "id": {
+          "description": "Virtual Machine image path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
       ]
     },
     "NodeStateCounts": {
